@@ -33,8 +33,7 @@ phases:
       #- export PATH=$PATH:/sonar-scanner-3.3.0.1492-linux/bin/
       - wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.4.0.2170-linux.zip
       - unzip ./sonar-scanner-cli-4.4.0.2170-linux.zip -d /var/lib/sonar/
-      - ls /var/lib/sonar/sonar-scanner-cli-4.4.0.2170-linux/bin
-      - export PATH=$PATH:var/lib/sonar/sonar-scanner-cli-4.4.0.2170-linux/bin
+      - export PATH=$PATH:/var/lib/sonar/sonar-scanner-cli-4.4.0.2170-linux/bin
   build:
     commands:
       - java -version
