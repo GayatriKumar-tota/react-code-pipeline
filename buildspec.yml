@@ -12,7 +12,7 @@ phases:
       - apt-get update
       - apt install -y openjdk-8-jdk
       - apt install -y maven
-      - echo "Installing Node 12...""
+      - echo "Installing Node 12..."
       - curl -sL https://deb.nodesource.com/setup_12.x | bash -
       - apt install -y nodejs
       - echo Installing Yarn...
