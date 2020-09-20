@@ -8,7 +8,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: openjdk8
+      java: openjdk11
   pre_build:
     commands:
       - apt-get update
@@ -21,6 +21,7 @@ phases:
       - export PATH=$PATH:/sonar-scanner-3.3.0.1492-linux/bin/
   build:
     commands:
+      - java -version
       - mvn test    
       #- mvn sonar:sonar -Dsonar.login=$LOGIN -Dsonar.host.url=$HOST -Dsonar.projectKey=$Project -Dsonar.organization=$Organization 
       - mvn sonar:sonar -Dsonar.login="a5921b47e2ae12d28f24dd6d214d8bc65149f973" -Dsonar.host.url="https://sonarcloud.io" -Dsonar.projectKey="GayatriKumar-tota_react-code-pipeline" -Dsonar.organization="gayatrikumar-tota"
