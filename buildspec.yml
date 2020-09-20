@@ -7,9 +7,10 @@ version: 0.2
 #    Project: prod/sonar:Project
 phases:
   install:
-   runtime-versions:
-      java: openjdk8
     commands:
+      - echo install java & maven
+      - apt install openjdk-8-jdk
+      - apt install maven
       - echo Installing Node 12...
       - curl -sL https://deb.nodesource.com/setup_12.x | bash -
       - apt install -y nodejs
