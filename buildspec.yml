@@ -8,10 +8,10 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo install java & maven
+      - echo "install java & maven"
       - apt install openjdk-8-jdk
       - apt install maven
-      - echo Installing Node 12...
+      - echo "Installing Node 12...""
       - curl -sL https://deb.nodesource.com/setup_12.x | bash -
       - apt install -y nodejs
       - echo Installing Yarn...
@@ -20,7 +20,7 @@ phases:
       - apt install --no-install-recommends yarn
   pre_build:
     commands:
-      - echo Installing dependencies...
+      - echo "Installing dependencies..."
       - yarn
       - apt-get update
       - apt-get install -y jq
