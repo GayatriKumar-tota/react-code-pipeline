@@ -37,10 +37,10 @@ phases:
   build:
     commands:
       - java -version
-      - sonar-scanner --version
+      - /var/lib/sonar/sonar-scanner-4.4.0.2170-linux/bin/sonar-scanner --version
       #- mvn test    
       #- mvn sonar:sonar -Dsonar.login=$LOGIN -Dsonar.host.url=$HOST -Dsonar.projectKey=$Project -Dsonar.organization=$Organization 
-      - sonar-scanner -Dsonar.login=a5921b47e2ae12d28f24dd6d214d8bc65149f973 -Dsonar.organization=gayatrikumar-tota -Dsonar.projectKey=GayatriKumar-tota_react-code-pipeline -Dsonar.sources=. -Dsonar.host.url=https://sonarcloud.io
+      - /var/lib/sonar/sonar-scanner-4.4.0.2170-linux/bin/sonar-scanner -Dsonar.login=a5921b47e2ae12d28f24dd6d214d8bc65149f973 -Dsonar.organization=gayatrikumar-tota -Dsonar.projectKey=GayatriKumar-tota_react-code-pipeline -Dsonar.sources=. -Dsonar.host.url=https://sonarcloud.io
       - sleep 5
       - curl https://sonarcloud.io/api/qualitygates/project_status?projectKey="GayatriKumar-tota_react-code-pipeline" >result.json
       - cat result.json
