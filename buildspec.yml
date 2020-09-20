@@ -9,6 +9,7 @@ phases:
   install:
     commands:
       - echo "install java & maven"
+      - apt-get update
       - apt install -y openjdk-8-jdk
       - apt install -y maven
       - echo "Installing Node 12...""
